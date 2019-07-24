@@ -9,7 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;  
 import javax.servlet.http.HttpServletResponse;  
   
-import com.bookstore.BookRepository;  
+import com.bookstore.BookRepository; 
+import javax.annotation.sql.DataSourceDefinition;
+
+
+@DataSourceDefinition(
+name = "java:app/jdbc/bookstore",
+     className = "org.apache.derby.jdbc.ClientDataSource",
+     portNumber = 1527,
+     serverName = "localhost",
+     databaseName = "bookstore",
+     user = "app",
+     password = "app",
+     properties={"create=true"})
   
 @WebServlet("/book/")  
 public class BookListServlet extends HttpServlet {  
