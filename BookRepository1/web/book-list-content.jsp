@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style type="text/css">
+    <style type="text/css"> 
         body {
             color: #566787;
             background: #f5f5f5;
@@ -232,7 +232,17 @@
         .modal form label {
             font-weight: normal;
         }	
+
+        @media (min-width: 768px)
+        .navbar-collapse.collapse {
+            display: inline-block; 
+            height: auto!important;
+            padding-bottom: 0;
+            overflow: visible!important;
+        }
     </style>
+
+
     <script type="text/javascript">
         $(document).ready(function () {
             // Activate tooltip
@@ -295,26 +305,26 @@
                 </thead>
                 <tbody>
                     <tr>
-                <c:forEach var="book" items="${books}">    
-                    <td>
-                        <span class="custom-checkbox">
-                            <input type="checkbox" class="checkbox_class" name="options[]" value="1">
-                            <label for="checkbox5"></label>
-                        </span>
-                    </td>
-                    <td>    
-                        <a href="${pageContext.request.contextPath}/book?id=${book.id}">${book.title}</a>   
-                    </td>  
-                    <td>${book.description}</td>  
-                    <td>${book.price}</td>  
-                    <td>${book.pubDate}</td>  
-                    <td>
-                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                    </td>
-                    </tr>  
-                </c:forEach>  
-                </tr>
+                        <c:forEach var="book" items="${books}">    
+                            <td>
+                                <span class="custom-checkbox">
+                                    <input type="checkbox" class="checkbox_class" name="options[]" value="1">
+                                    <label for="checkbox5"></label>
+                                </span>
+                            </td>
+                            <td>    
+                                <a href="${pageContext.request.contextPath}/book?id=${book.id}">${book.title}</a>   
+                            </td>  
+                            <td>${book.description}</td>  
+                            <td>${book.price}</td>  
+                            <td>${book.pubDate}</td>  
+                            <td>
+                                <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            </td>
+                        </tr>  
+                    </c:forEach>  
+                    </tr>
 
 
                 </tbody>

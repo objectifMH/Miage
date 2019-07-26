@@ -1,9 +1,7 @@
 <div id="footer">  
-    
-  
-    <div class="about">Copyright (c) 2019 Epsi Montpellier.</div>  
-  
-    <div class="about">  
-        This project is the first step towards becoming a real Web Developer !   
-    </div>  
+     <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2019</small>
+        </div>
+      </div>
 </div>  
